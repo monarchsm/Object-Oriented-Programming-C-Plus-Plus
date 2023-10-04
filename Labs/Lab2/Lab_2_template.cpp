@@ -1,6 +1,6 @@
 /***
  * CSE 2010 Fall 2023
- * Lab #{n}
+ * Lab #{2}
  * {Lizbeth Jimenez} {007670332}
  * {22 October 2023}
  * 
@@ -28,13 +28,13 @@ to
 * @return int
 */
 int power(int base, int exponent){
-assert(base >= 0);
-assert(exponent >= 0);
-int power_output = 1;
-for(int i = 0; i < exponent; i++){
-power_output *= base;
-}
-return power_output;
+    assert(base >= 0);
+    assert(exponent >= 0);
+    int power_output = 1;
+    for(int i = 0; i < exponent; i++){
+        power_output *= base;
+    }
+    return power_output;
 }
 
 /**
@@ -48,13 +48,13 @@ dividend by
 */
 
 // write floorDivision function here
-int floorDivision(int & dividend, int & divisor){
-int floor_div_output = 0;
-while (dividend - divisor >= 0) {
-dividend -= divisor; // dividend = dividend - divisor;
-floor_div_output += 1;
-}
-return floor_div_output;
+int floorDivision(int dividend, int divisor){
+    int floor_div_output = 0;
+    while (dividend - divisor >= 0) {
+        dividend -= divisor; // dividend = dividend - divisor;
+        floor_div_output += 1;
+    }
+    return floor_div_output;
 }
 /**
 * @brief modDivision(): returns the remainder from dividend / divisor
@@ -66,11 +66,11 @@ dividend by
 */
 
 int modDivision(int dividend, int divisor){
-int mod_output = dividend;
-while (mod_output - divisor >= 0) {
-mod_output -= divisor; // dividend = dividend - divisor;
-}
-return mod_output;
+  int mod_output = dividend;
+    while (mod_output - divisor >= 0) {
+        mod_output -= divisor; // dividend = dividend - divisor;
+    }
+    return mod_output;
 }
 
 /**
@@ -87,8 +87,8 @@ floorDivision,
 */
 
 void print(string operation, double output,int x, int y){
-cout << "Output of " << operation << " between " << x << " and " << \
-y << " is : " << output << endl;
+    cout << "Output of " << operation << " between " << x << " and " << \
+    y << " is : " << output << endl;
 }
 
 /**
@@ -106,47 +106,49 @@ All other cases results
 */
 
 string operation(int selection){
-if (selection ==1){
-return "power";
-} else if (selection == 2){
-return "floorDivision";
-} else if (selection == 3){
-return "modDivision";
-} else {
-return "invalid";
+    if (selection ==1){
+        return "power";
+    } else if (selection == 2){
+        return "floorDivision";
+    } else if (selection == 3){
+        return "modDivision";
+    } else {
+        return "invalid";
+    }
 }
-}
+
 int main()
 {
 
-// test input for power
-int x = 2;
-int y = 5;
-int base = x;
-int exponent = y;
-// power
-int power_output = power(base, exponent);
-
-string op = operation(1);
-print(op ,power_output, base, exponent);
-// test input for floor and modulos
-x = 65;
-y = 11;
-// floor division
-int dividend = x;
-int divisor = y;
-int floor_div_output = floorDivision(dividend, divisor);
-
-op = operation(2);
-print(op ,floor_div_output, dividend, divisor);
-// reset test input for modulos division
-dividend = x;
-divisor = y;
-
-// modules division
-int mod_output = modDivision(dividend, divisor);
-
-op = operation(3);
-print(op, mod_output, dividend, divisor);
-
-// 
+    // test input for power
+    int x = 2;
+    int y = 5;
+    int base = x;
+    int exponent = y;
+    // power
+    int power_output = power(base, exponent);
+    // print
+    string op = operation(1);
+    print(op ,power_output, base, exponent);
+    // test input for floor and modulos
+    x = 65;
+    y = 11;
+    
+    // floor division
+    int dividend = x;
+    int divisor = y;
+    int floor_div_output = floorDivision(dividend, divisor);
+    
+    
+    op = operation(2);
+    print(op ,floor_div_output, dividend, divisor);
+    
+    // reset test input for modulos division
+    dividend = x;
+    divisor = y;
+    
+    // modulos division
+    int mod_output = modDivision(dividend, divisor);
+    op = operation(3);
+    print(op, mod_output, dividend, divisor);
+}
