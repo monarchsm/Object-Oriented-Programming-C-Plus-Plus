@@ -37,7 +37,7 @@ int main() {
     // instantiate your variables, x and y as int of value 0  
     // make modifications from int to doubles for section 5.2 here
     int x = 1;
-    int y = 2.4;
+    double y = 2.4;
     int user_selection = 0;
 
     cin >> user_selection;
@@ -54,31 +54,29 @@ int main() {
                 cerr << "Invalid\n";
                 return 0;
             }
+            cout << "Requesting y\n";
+            cin >> y;
+            if (cin.fail()){
+                cerr << "Invalid\n";
+                return user_selection;
+            }
             cout << "sqrt(" << x << ") is " << sqrt(x) << endl;
-        }
-        /*****
-         *  Provide your own code for when the user selects numbers 2 to 5. 
-         *  You should NOT have to create your own functions. 
-         *  As indicated in sqrt(x), you should call pow(x,y), ceil(x/y), floor(x/y). 
-         * 
-         *  Make sure to understand what each function does. 
-         *  (Hint: ceil() will not behave as expected when x and y are ints. You 
-         *  should see the distinction between ceil() and floor() 
-         *  when doubles are involved.)
-         * 
-         * 
-         * 
-        *****/
     
-    
-        else if (user_selection == 2){
+
+        } else if (user_selection == 2){
             cout << "Requesting x\n";
             cin >> x;
             if (cin.fail()){
                 cerr << "Invalid\n";
-                return 0;
+                return user_selection;
             }
-            cout << "pow(" << x << ") is " << pow(x,y) << endl;
+            cout << "Requesting y\n";
+            cin >> y;
+            if (cin.fail()){
+                cerr << "Invalid\n";
+                return user_selection;
+            }
+            cout << "pow(" << x << "," << y << ") is " << pow(x,y) << endl;
         
 
         
@@ -87,10 +85,15 @@ int main() {
             cin >> x;
             if (cin.fail()){
                 cerr << "Invalid\n";
-                return 0;
+                return user_selection;
             }
-            cout << "ceil(" << x << ") is " << ceil(x/y) << endl;
-         
+            cout << "Requesting y\n";
+            cin >> y;
+            if (cin.fail()){
+                cerr << "Invalid\n";
+                return user_selection;
+            }
+            cout << "ceil(" << x << "," << y << ") is " << ceil(x/y) << endl;
         
 
         } else if (user_selection == 4){
@@ -98,26 +101,38 @@ int main() {
             cin >> x;
             if (cin.fail()){
                 cerr << "Invalid\n";
-                return 0;
+                return user_selection;
             }
-            cout << "floor(" << x << ") is " << floor(x/y) << endl;
+            cout << "Requesting y\n";
+            cin >> y;
+            if (cin.fail()){
+                cerr << "Invalid\n";
+                return user_selection;
+            }
+            cout << "floor(" << x << "," << y << ") is " << floor(x/y) << endl;
          
 
-        } else if (user_selection == 5){
+       } else if (user_selection == 5){
             cout << "Requesting x\n";
             cin >> x;
             if (cin.fail()){
                 cerr << "Invalid\n";
-                return 0;
+                return user_selection;
             }
-            cout << "division between(" << x << ") is " << (x/y) << endl;
+            cout << "Requesting y\n";
+            cin >> y;
+            if (cin.fail()){
+                cerr << "Invalid\n";
+                return user_selection;
+            }
+            cout << "division between" << x << "," << " is " << x/y << endl;
          
         
         } else if (user_selection == 6){
             cout << "Requesting x\n";
             // the reason we created distinct x and y variables (mod_x, mod_y) 
             // is because '%' only expects int and never doubles. 
-            int mod_x = 0.0;
+            int mod_x = 0;
             int mod_y = 0;
             cin >> mod_x;
             if (cin.fail()){
@@ -128,7 +143,7 @@ int main() {
             cin >> mod_y;
             if (cin.fail()){
                 cerr << "Invalid\n";
-                return user_selection;
+                return 6;
             }  
 
         cout << mod_x << "/ " << mod_y  << " is " << mod_x%mod_y << endl;
