@@ -79,10 +79,10 @@ int main() {
                 return 0;
             }
             cout << "pow(" << x << ") is " << pow(x,y) << endl;
-        }
+        
 
         
-        else if (user_selection == 3){
+        } else if (user_selection == 3){
             cout << "Requesting x\n";
             cin >> x;
             if (cin.fail()){
@@ -91,9 +91,9 @@ int main() {
             }
             cout << "ceil(" << x << ") is " << ceil(x/y) << endl;
          
-        }
+        
 
-        else if (user_selection == 4){
+        } else if (user_selection == 4){
             cout << "Requesting x\n";
             cin >> x;
             if (cin.fail()){
@@ -102,9 +102,8 @@ int main() {
             }
             cout << "floor(" << x << ") is " << floor(x/y) << endl;
          
-        }
 
-        else if (user_selection == 5){
+        } else if (user_selection == 5){
             cout << "Requesting x\n";
             cin >> x;
             if (cin.fail()){
@@ -113,8 +112,8 @@ int main() {
             }
             cout << "division between(" << x << ") is " << (x/y) << endl;
          
-        }
-        else if (user_selection == 6){
+        
+        } else if (user_selection == 6){
             cout << "Requesting x\n";
             // the reason we created distinct x and y variables (mod_x, mod_y) 
             // is because '%' only expects int and never doubles. 
@@ -124,20 +123,20 @@ int main() {
             if (cin.fail()){
                 cerr << "Invalid\n";
                 return 6;
-            {
+            }
             cout << "Requesting y\n";
             cin >> mod_y;
             if (cin.fail()){
                 cerr << "Invalid\n";
                 return user_selection;
-            }
+            }  
 
-            cout << mod_x << "/ " << mod_y  << " is " << mod_x%mod_y << endl;
-        else if {
+        cout << mod_x << "/ " << mod_y  << " is " << mod_x%mod_y << endl;
+        } else {
             printf("Invalid selection\n");
         }
 
     }
     
-        return 0;
-     }
+    return 0;
+}
