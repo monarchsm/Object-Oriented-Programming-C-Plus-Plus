@@ -15,8 +15,6 @@
  * 
 ***/
 
-
-
 #include <iostream>
 #include <cmath>
 
@@ -53,12 +51,6 @@ int main() {
             if (cin.fail()){
                 cerr << "Invalid\n";
                 return 0;
-            }
-            cout << "Requesting y\n";
-            cin >> y;
-            if (cin.fail()){
-                cerr << "Invalid\n";
-                return user_selection;
             }
             cout << "sqrt(" << x << ") is " << sqrt(x) << endl;
     
