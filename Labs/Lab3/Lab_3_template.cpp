@@ -1,7 +1,7 @@
 /***
  * CSE 2010 Fall 2023
  * Lab #{n}
- * {Lizbeth Jimenez} #{Coyote ID}
+ * {Lizbeth Jimenez} #{007670332}
  * {Date}
  *
  * {Description of lab AKA paraphrase "abstract" section from lab}
