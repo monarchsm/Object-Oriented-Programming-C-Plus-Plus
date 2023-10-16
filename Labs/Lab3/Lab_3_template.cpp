@@ -2,7 +2,7 @@
  * CSE 2010 Fall 2023
  * Lab #3
  * Lizbeth Jimenez #007670332
- * {Date}
+ * {16 October 2023}
  *
  * {Description of lab AKA paraphrase "abstract" section from lab}
  *
