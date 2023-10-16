@@ -1,17 +1,15 @@
 /***
  * CSE 2010 Fall 2023
- * Lab #{1}
- * {Lizbeth Jimenez} {007670332}
- * {18 September 2023}
+ * Lab #1
+ * Lizbeth Jimenez 007670332
+ * 18 September 2023
  * 
  * {Sets the students up for the basics and what is to be expected of you. It teaches you 
  * how to compile and execute C++ programs, use input output commands (I/O), use control flow, 
  * and practice how to properly document your code.}
  * 
- * {Describe 1) One challenging part was setting up C++, I was struggling to compile code and 
- * properly set up. My plan is to study the code thoroughly and learn how to format correctly (hectic
- * week). Another challenge is the code and expectations itself, I carefully watched the first few 
- * recordings and googled what I need more help in expect I know I have to do more and plan to. 
+ * {Describe 1) One challenging part was setting up C++, I was struggling to compile the code and 
+ * properly set up VS. My solution: going to office hours. 
  * 
 ***/
 
@@ -34,9 +32,9 @@ int main() {
 
     // instantiate your variables, x and y as int of value 0  
     // make modifications from int to doubles for section 5.2 here
-    int x = 1;
-    double y = 2.4;
-    int user_selection = 0;
+    int x = 2.4;
+    double y = 4.5;
+    int user_selection = 4;
 
     cin >> user_selection;
 
