@@ -41,5 +41,30 @@ int main()
     cout << bob.getName() << endl;
     Person unknown = Person(); //Person unknown; // 
     cout << unknown.getName() << endl;
+
+    cout << "Test Age\n";
+    cout << bob.getAge() << endl;
+    bob.updateAge(101);
+    cout << bob.getAge() << endl;
+
+    cout << "Test Occupation\n";
+    cout << bob.getOccupation() << endl;
+    bob.updateOccupation("consultant");
+    cout << bob.getOccupation() << endl;
+
+    cout << "Testing lives_in_IE\n";
+    cout << bob.getLivesInIE() << endl;
+    bob.movedLocation();
+    cout << bob.getLivesInIE() << endl;
+
+    cout << "Testing isOlderThan\n";
+    cout << bob.getName() << ';' << bob.getAge();
+    unknown.updateAge(10);
+    unknown.updateName("Doe");
+    cout << unknown.getName() << ';' << unknown.getAge() << endl;
+    cout << bob.isOlderThan(unknown) << endl;
+
+
+
 }
 
