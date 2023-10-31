@@ -1,27 +1,27 @@
 //Lab_4_arr.cpp
 #include <iostream>
 #include "ArrayVec.h"
-#include "DisplayArr.h"
+#include "DisplayVec.h"
 using namespace std;
 int main()
 {
-    // initialize arr
+    // initialize vec
     const int CAPACITY = 10;
-    int test_arr[CAPACITY];
+    vector<int> test_vec(CAPACITY);
 
     //initialize ArrayVec and DisplayArr
-    DisplayArr disp = DisplayArr();
+    DisplayVec disp = DisplayVec();
     ArrayVec av = ArrayVec();
 
     // populate with values
     int range = 15;
     int num_elem = 10;
-    av.randGenArr(test_arr, num_elem, range);
+    av.randGenVec(test_vec, num_elem, range);
 
     // display contents
-    int test_arr_size = av.getSize(test_arr, CAPACITY);
-    cout << "Array Elements\n";
-    disp.printArray(test_arr, test_arr_size);
+    int test_vec_size = test_vec.size();
+    cout << "Vector Elements\n";
+    disp.printVector(test_vec);
     cout << "Array Memsize\n";
-    disp.printMetaArray(test_arr, test_arr_size);
+    disp.printMetaVector(test_vec);
 }
