@@ -6,8 +6,10 @@
  *
  * {Description of lab AKA paraphrase "abstract" section from lab}
  *
- * {Describe 1) what was most challenging and 2) how you solved/overcame the problem OR
- * the directions of how you PLAN to solve it}
+ * {Describe 1) Getting  person b to work, it kept giving me errors, i kept compiling
+ * the code to read the errors but it got worse quick. My solution is to go to lab because 
+ * I cant fix it after all this time. But I will look at in during my own time to see if i can fix it
+ * before then!
  *
 ***/
 
