@@ -38,7 +38,8 @@
  * @brief Construct a new Person:: Person object
  * default constructor sets the private variables to default values
  */
-Person::Person(){
+Person::Person()
+{
     name = "";
     age = -1;
     occupation = "";
@@ -62,7 +63,8 @@ Person::Person(){
  * @param occupation string: their job status
  * @param lives_in_IE bool: returns if the Person lives in the Inland Empire or not
  */
-Person::Person(string name, int age, string occupation, bool lives_in_IE){
+Person::Person(string name, int age, string occupation, bool lives_in_IE)
+{
     this->name = name;
     this->age = age;
     this->occupation = occupation;
@@ -107,9 +109,9 @@ void Person::updateOccupation(string new_occupation)
 void Person::movedLocation()
 {
     if (lives_in_IE == true){
-        lives_in_IE; false;
+        lives_in_IE = false;
     } else {
-        lives_in_IE; true;
+        lives_in_IE = true;
     }
 }
 
@@ -119,7 +121,8 @@ void Person::movedLocation()
  * 
  * @return string 
  */
-string Person::getName() const{
+string Person::getName() const
+{
     return name;
 }
 
@@ -165,6 +168,10 @@ bool Person::getLivesInIE() const
  * @return false if implict Person is younger or equal to b
  */
 bool Person::isOlderThan(Person b) const
-{
-    return false;
-}
+{ 
+    if (age > b.getAge()){
+        return true; 
+    } else { 
+        return false;
+    } 
+} 

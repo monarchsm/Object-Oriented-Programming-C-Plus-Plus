@@ -2,14 +2,15 @@
  * CSE 2010 Fall 2023
  * Lab #3
  * Lizbeth Jimenez #007670332
- * {16 October 2023}
+ * 15 November 2023
  *
- * {Description of lab AKA paraphrase "abstract" section from lab}
+ * Its about creating our class object and maniupluating it with functions, and learning to access them 
+ * with functions. And ultmiately learn how to link files together. 
  *
- * {Describe 1) Getting  person b to work, it kept giving me errors, i kept compiling
- * the code to read the errors but it got worse quick. My solution is to go to lab because 
- * I cant fix it after all this time. But I will look at in during my own time to see if i can fix it
- * before then!
+ * Figuring out what the error was, at first I kept running the code for Lab4, when I
+ * realized it, I ran the right code to compile but still had some format errors I had to find. And
+ * when I did, I forgot to control S so I was a confused for a second. But overall the solution was
+ * to stare at my lab and Lecture 11. 
  *
 ***/
 
@@ -43,7 +44,6 @@ int main()
     cout << bob.getName() << endl;
     Person unknown = Person(); //Person unknown; // 
     cout << unknown.getName() << endl;
-
     cout << "Test Age\n";
     cout << bob.getAge() << endl;
     bob.updateAge(101);
@@ -60,13 +60,10 @@ int main()
     cout << bob.getLivesInIE() << endl;
 
     cout << "Testing isOlderThan\n";
-    cout << bob.getName() << ';' << bob.getAge();
+    cout << bob.getName() << ':' << bob.getAge() << endl;
     unknown.updateAge(10);
     unknown.updateName("Doe");
-    cout << unknown.getName() << ';' << unknown.getAge() << endl;
+    cout << unknown.getName() << ':' << unknown.getAge() << endl;
     cout << bob.isOlderThan(unknown) << endl;
-
-
-
 }
 
