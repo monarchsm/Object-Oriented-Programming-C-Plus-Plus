@@ -1,14 +1,14 @@
 /***
  * CSE 2010 Fall 2023
  * Lab #5
- * Lizbeth Jimenez #007670332
- * 10 November 2023
+ * Lizbeth Jimenez 007670332
+ * 17 November 2023 
  *
- * Will learn to repeat/go through vectors and arrays to search for elements. 
- * 
- * The challenge was getting the code to give me an output, no matter what I did it never gave
- * me an output. I dont have a solution for now until Monday. 
+ * To iterate through arrays and or vectors to search for elements. Then monitor the speed to communte 
+ * the output and graph their findings. 
  *
+ * The most challenging was the graph section, the outputs I recieved were all 0s. I solved this 
+ * by going to Lab to hear an explanation. 
 ***/
 
 #include <iostream>
@@ -43,7 +43,7 @@ int main()
     }
     
     // save the times under BigO_iterative.csv
-    string filename = "BigO_iterative.csv";
+    string filename = "BigO_binary.csv";
     sa.writeToFile(filename, iter_run, arr_n);
 
     /* TO DO: Implement the above code but for binarySearch. This time run binarySearch
